@@ -1,4 +1,9 @@
 Attribute VB_Name = "toggle_rule"
+'***************************************************************************
+' Toggle an outlook rule on or off
+' Usefull to add to the macro bar for quick acces
+'***************************************************************************
+
 Sub toggle_wait_rule()
     toggle_rule "send_mail_hold_1_minute"
 End Sub
@@ -12,7 +17,7 @@ Sub toggle_rule(rule_name As String)
     ' fetch the rule
     Set olRules = Application.Session.DefaultStore.GetRules
     Set olRule = olRules.Item(rule_name)
-    
+     
     ' toggle
     If olRule.Enabled = True Then
         olRule.Enabled = False
