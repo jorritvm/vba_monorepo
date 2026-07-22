@@ -64,54 +64,12 @@ Private Function abbreviationToMAPIFolder(text As String) As MAPIFolder
             Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\" + Format(Date, "yyyy"))
         Case "conf"
             Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\CONFIDENTIAL")
-        Case "opl"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\01. Elia\opleidingen")
-        Case "car"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\01. Elia\leasing")
-        Case "it"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\01. Elia\IT")
-        Case "news"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\01. Elia\news")
         Case "priv"
             Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\z_prive")
         Case "fun"
             Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\z_fun")
-            
-        'gd
-        Case "adq"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\adqflex")
-        Case "ct"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\coreteam")
-        Case "crm"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\CRM")
-        Case "db"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\pisa_opal")
-        Case "do"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\dataorg")
-        Case "eu"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\entsoe")
-        Case "fop"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\_old\FOP")
-        Case "gd"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\general")
-        Case "vec"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\vectoren")
-            
-        ' old GD
-        Case "adv"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\_old\advisory")
-        Case "tf"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\_old\taskforce")
-        Case "tir"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\_old\tirole")
-        Case "de"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\_old\spoc_DE")
-        Case "sr"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\04. GD\_old\SR")
-            
-        'ipm
-        Case "ipm"
-            Set objFolder = GetMAPIFolderFromStringPath("Personal Folders\archief\z_old\03. EE\01. IPM")
+
+        ' add to this list as needed
             
     End Select
     Set abbreviationToMAPIFolder = objFolder
