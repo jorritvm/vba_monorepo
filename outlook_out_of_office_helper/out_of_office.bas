@@ -1,4 +1,6 @@
 Attribute VB_Name = "out_of_office"
+Private Const OOO_SUBJECT As String = "Jorrit OoO"
+
 Sub CreateOoOAndVACAppointments()
     Dim startDateStr As String
     Dim endDateStr As String
@@ -70,10 +72,10 @@ Sub CreateOoOAndVACAppointments()
         Exit Sub
     End If
 
-    ' Create all-day "Jorrit OoO" appointment
+    ' Create all-day out-of-office appointment
     Set olAppt = olCalendar.Items.Add(olAppointmentItem)
     With olAppt
-        .Subject = "Jorrit OoO"
+        .Subject = OOO_SUBJECT
         .Start = startDate
         .End = endDate + 1
         .AllDayEvent = True
